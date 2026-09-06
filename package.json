@@ -1,0 +1,24 @@
+{
+  "name": "pi-k8s-knowledge",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Kubernetes knowledge extension for pi (development skeleton)",
+  "type": "module",
+  "keywords": ["pi-package", "pi-extension", "kubernetes"],
+  "files": ["src", "README.md"],
+  "engines": { "node": ">=22" },
+  "pi": { "extensions": ["./src/index.ts"] },
+  "scripts": {
+    "dev": "pi -e ./src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test test/*.test.ts",
+    "check": "npm run typecheck && npm test"
+  },
+  "peerDependencies": { "@earendil-works/pi-coding-agent": "*" },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "^0.85.1",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  }
+}
