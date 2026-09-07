@@ -363,30 +363,6 @@ Do not pass a `.tgz` directly as a Pi extension path. The artifact contains only
 Tests, docs, icon assets, lockfile, and private state stay in the checkout;
 gallery images are hosted through GitHub. Development commands require the checkout.
 
-## Publishing
-
-The manifest targets public npm publication as `@senad-d/pi-k8s-knowledge`.
-Before release, confirm package-name ownership and version availability, review
-the artifact, and obtain publication authorization. See the source checkout's
-[release checklist and historical audit](docs/publishing.md).
-
-After those gates, from a clean source checkout:
-
-```sh
-npm run validate
-RUN_PACKAGE_INSTALL=1 npm run check:pack
-npm run pack:dry-run
-npm publish
-```
-
-`prepublishOnly` runs ordinary validation before publication; do not bypass it
-with `--ignore-scripts`. Use your own npm authentication. Publish the reviewed
-version, verify installation in a fresh Pi session, and push the release commit
-and tag. Alternatively, `.github/workflows/publish.yml` provides manual-dispatch
-publication with provenance and release tagging from the default branch. It
-requires npm trusted-publisher and GitHub `npm` environment setup; do not run
-both publication paths for the same version.
-
 ## License
 
 MIT — Copyright (c) 2026 Senad Dizdarević. See [LICENSE](LICENSE).

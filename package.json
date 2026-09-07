@@ -1,6 +1,6 @@
 {
   "name": "@senad-d/pi-k8s-knowledge",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Official Kubernetes documentation evidence and citations for Pi, without cluster access",
   "publishConfig": {
     "access": "public",
@@ -80,7 +80,7 @@
     "globals": "^17.12.0",
     "tsx": "^4.20.0",
     "typebox": "1.3.25",
-    "typescript": "^7.0.2",
+    "typescript": "~6.0.3",
     "typescript-eslint": "^8.69.0"
   }
 }

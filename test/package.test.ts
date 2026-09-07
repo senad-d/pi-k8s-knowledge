@@ -77,7 +77,7 @@ test("packed manifest declares the Pi entry point, runtime dependencies and publ
   });
   assert.deepEqual(manifest.files, ["src/index.ts", "src/retrieval.ts", "src/evidence.ts", "README.md", "LICENSE", "SECURITY.md", "CHANGELOG.md"]);
   assert.deepEqual(manifest.engines, { node: ">=22.19.0" });
-  assert.deepEqual(manifest.dependencies, { parse5: "7.3.0" });
+  assert.deepEqual(manifest.dependencies, { parse5: "8.0.1" });
   assert.deepEqual(manifest.peerDependencies,
     { "@earendil-works/pi-coding-agent": "*", typebox: "*" });
   assert.ok(manifest.keywords.includes("pi-package"));
@@ -92,7 +92,7 @@ const load = `
   import { homedir } from 'node:os';
   import { createRequire } from 'node:module';
   assert.equal(createRequire(join(process.argv[2], 'package.json')).resolve('parse5'),
-    join(process.cwd(), 'node_modules', 'parse5', 'dist', 'cjs', 'index.js'));
+    join(process.cwd(), 'node_modules', 'parse5', 'dist', 'index.js'));
   const { DefaultResourceLoader } = await import(process.argv[1]);
   assert.equal(homedir(), process.env.HOME);
   const cache = join(homedir(), '.pi', '.k8s-knowledge');
