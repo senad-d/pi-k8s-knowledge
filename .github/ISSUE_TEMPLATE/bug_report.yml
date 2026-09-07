@@ -1,0 +1,48 @@
+name: Bug report
+description: Report a problem with Kubernetes Knowledge
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Use synthetic examples and redact secrets. For suspected vulnerabilities, follow SECURITY.md instead of posting details here.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of the bug and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Include sanitized k8s_knowledge arguments and any official documentation URL involved.
+      placeholder: |
+        1. Ask Pi when to use a startup probe.
+        2. Inspect the k8s_knowledge result.
+    validations:
+      required: true
+  - type: input
+    id: extension-version
+    attributes:
+      label: Extension version
+      description: Installed package version or source commit, and installation method.
+      placeholder: "0.1.0, local checkout"
+    validations:
+      required: false
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Node.js version, and Pi version.
+      placeholder: "macOS 15 · Node 22.19 · pi 0.82.1"
+    validations:
+      required: false
+  - type: textarea
+    id: output
+    attributes:
+      label: Relevant output
+      description: Sanitized tool result or error text. Do not attach session files, kubeconfig, or credentials.
+      render: shell
+    validations:
+      required: false

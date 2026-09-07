@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security report
+    url: https://github.com/senad-d/pi-k8s-knowledge/blob/main/SECURITY.md
+    about: Follow the security policy; do not disclose vulnerability details in public issues.

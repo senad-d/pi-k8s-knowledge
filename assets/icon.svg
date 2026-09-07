@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Kubernetes Knowledge</title>
+  <desc id="desc">An open documentation book inside a blue seven-sided cluster symbol on a dark rounded square.</desc>
+  <defs>
+    <linearGradient id="background" x2="1" y2="1">
+      <stop stop-color="#152A49"/>
+      <stop offset="1" stop-color="#081323"/>
+    </linearGradient>
+    <linearGradient id="cluster" x2="0.8" y2="1">
+      <stop stop-color="#58B9FF"/>
+      <stop offset="1" stop-color="#326CE5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="220" fill="url(#background)"/>
+  <path d="M512 123 816 269 891 598 681 861 343 861 133 598 208 269Z" fill="url(#cluster)"/>
+  <path d="M512 194 760 313 821 582 650 796 374 796 203 582 264 313Z" fill="#122B4B"/>
+  <g stroke="#78C9FF" stroke-width="18" stroke-linecap="round">
+    <path d="M512 244V299 M710 342 675 385 M761 555 709 543 M624 722 602 674 M400 722 422 674 M263 555 315 543 M314 342 349 385"/>
+  </g>
+  <g fill="#A7DEFF">
+    <circle cx="512" cy="244" r="17"/>
+    <circle cx="710" cy="342" r="17"/>
+    <circle cx="761" cy="555" r="17"/>
+    <circle cx="624" cy="722" r="17"/>
+    <circle cx="400" cy="722" r="17"/>
+    <circle cx="263" cy="555" r="17"/>
+    <circle cx="314" cy="342" r="17"/>
+  </g>
+  <path d="M512 399Q431 345 337 367V612Q431 590 512 645Q593 590 687 612V367Q593 345 512 399Z" fill="#F1F8FF" stroke="#122B4B" stroke-width="16" stroke-linejoin="round"/>
+  <path d="M512 400V638" fill="none" stroke="#326CE5" stroke-width="12"/>
+  <g fill="none" stroke="#5683AC" stroke-width="14" stroke-linecap="round">
+    <path d="M378 423Q424 420 468 443 M378 479Q424 476 468 499 M378 535Q424 532 451 546"/>
+    <path d="M556 443Q600 420 646 423 M556 499Q600 476 646 479 M573 546Q600 532 646 535"/>
+  </g>
+</svg>
