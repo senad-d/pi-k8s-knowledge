@@ -19,9 +19,10 @@ or fix-time SLA is promised.
 
 ## Supported versions
 
-Security fixes target the latest released version. Older versions have no
-backport commitment. Before the first release, reports against the current main
-branch are welcome. Package metadata alone does not establish release status.
+Version 0.1.1 is the latest published version verified on the public npm registry.
+Reports against that release and the current main branch are welcome. No
+commitment is made to backport fixes to older versions or to provide a response
+or fix within a particular time.
 
 ## Runtime permissions and boundaries
 

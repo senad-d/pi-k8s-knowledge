@@ -61,15 +61,20 @@ This checkout implements:
 - Global documentation retention with restart, concurrency, automatic-expiry, and shutdown checks.
 - TypeScript validation, native Node tests, exact tarball-content checks, and an opt-in production package install/Pi-loading check.
 
-The package is prepared for public npm distribution as
-`@senad-d/pi-k8s-knowledge`. Publication and package-name availability have not
-been verified; registry installation commands below apply after release.
-Badges depend on the corresponding public repository/package being available.
-Provider-mediated smoke remains waived and **unverified, not passed**.
+`@senad-d/pi-k8s-knowledge` 0.1.1 is publicly available from npm under the
+`latest` tag; the registry records publication at 2026-09-07T08:57:48.979Z.
+The npm manifest, tarball URL, and tarball reachability were verified, as were
+the current reachability of the Kubernetes documentation root and one
+representative page.
+
+Those public checks did not install the registry artifact, load it in Pi, or run
+an end-to-end lookup. Earlier package install/Pi-loading checks used a tarball
+built from a local checkout and synthetic Kubernetes responses. Registry-install,
+live retrieval, and provider-mediated smoke remain **unverified, not passed**.
 
 ## Quick Start
 
-### 1) Install the extension (after release)
+### 1) Install the extension
 
 ```sh
 pi install npm:@senad-d/pi-k8s-knowledge
@@ -224,10 +229,10 @@ recommendations.
 ## Requirements and Compatibility
 
 - **Node.js ≥22.19.0** and Pi.
-- **Pi 0.85.1** is the verified host. Wildcard host peers follow Pi packaging guidance, not a claim that every Pi version works.
+- **Pi 0.85.1** was exercised by earlier source-checkout and local-tarball checks. Wildcard host peers follow Pi packaging guidance, not a claim that every Pi version works.
 - **Network access** to official English `kubernetes.io/docs`; every lookup requires successful online retrieval.
 - **Writable home storage** for `~/.pi/.k8s-knowledge/`.
-- Other host versions and operating systems require separate verification. The CI workflow targets Linux with Node 24; configured jobs alone are not proof of compatibility.
+- Other host versions and operating systems require separate verification. `.github/workflows/ci.yml` runs `npm run validate` on Linux with Node 24; that workflow definition is not proof of compatibility, and it does not run the opt-in registry-install or live checks.
 
 No cluster connection, Kubernetes credentials, external search service, or
 extension-specific configuration is required.
@@ -345,7 +350,7 @@ From this checkout:
 
 ```sh
 npm pack --ignore-scripts
-npm install --prefix ./.pi/package-preview --omit=dev --legacy-peer-deps --ignore-scripts ./senad-d-pi-k8s-knowledge-0.1.0.tgz
+npm install --prefix ./.pi/package-preview --omit=dev --legacy-peer-deps --ignore-scripts ./senad-d-pi-k8s-knowledge-0.1.1.tgz
 pi install -l ./.pi/package-preview/node_modules/@senad-d/pi-k8s-knowledge
 ```
 
@@ -362,6 +367,10 @@ Do not pass a `.tgz` directly as a Pi extension path. The artifact contains only
 `package.json`, this README, `LICENSE`, `SECURITY.md`, `CHANGELOG.md`, and the three runtime TypeScript files.
 Tests, docs, icon assets, lockfile, and private state stay in the checkout;
 gallery images are hosted through GitHub. Development commands require the checkout.
+
+## Publishing
+
+Maintainers should use the current [publishing and verification procedure](docs/publishing.md).
 
 ## License
 
